@@ -1,0 +1,27 @@
+.searchbar {
+    border-radius: 10px 0px 0px 10px;
+    padding: 10px;
+    font-size: 14px;
+    outline: 1px solid rgb(0, 0, 0);
+    float: left;
+    width: 60%;
+    background: #f1f1f1;
+}
+
+.searchbtn {
+    /* background-color: red; */
+    margin: auto;
+    width: 50%;
+}
+
+.submitbtn {
+    border-radius: 0px 10px 10px 0px;
+    width: 10%;
+    padding: 10px;
+    background: #990505;
+    color: rgb(255, 255, 255);
+    font-size: 16.5px;
+    outline: 1px solid rgb(0, 0, 0);
+    border-left: none;
+    cursor: pointer;
+}
