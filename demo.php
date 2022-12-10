@@ -18,22 +18,23 @@
 						<tr>
 							<th>Personal ID</th>
 							<th>Name</th>
-							<th>Course Number</th>
+							<th>Book</th>
+							<th>Date of Release</th>
 						</tr>
 						
 						<?php
 
-							$sql1 = "SELECT * from personaldata2";
+							$sql1 = "SELECT personaldata.p_name, c_course, r_title, r_releaseDate FROM borrowerrecords INNER JOIN personaldata ON borrowerrecords.p_ID = personaldata.p_ID INNER JOIN coursedata ON personaldata.c_ID = coursedata.c_ID INNER JOIN resourcedata ON resourcedata.r_ID = borrowerrecords.r_ID";
 							$result = $conn->query($sql1);
 
 							if ($result->num_rows > 0) {
 								// output data of each row
 								while($row = $result->fetch_assoc()) {
 								echo "<tr><td>" . 
-								$row["p_ID"]. "</td><td>" . 
 								$row["p_name"]. "</td><td>" . 
-								$row["c_ID"]. "</td></tr>";
-
+								$row["c_course"]. "</td><td>" . 
+								$row["r_title"]. "</td><td>" . 
+								$row["r_releaseDate"]. "</td></tr>";
 								}
 								echo "</table>";
 							} else {
