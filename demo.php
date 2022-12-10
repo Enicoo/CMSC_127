@@ -2,13 +2,19 @@
 	include 'connect.php'
 ?>
 <html>
+	<head>
+		<link  rel="stylesheet" type="text/css" href="style.CSS" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
 	<body>
 
-		<!-- search function-->
-		<form action = "search.php" method ="POST">
-			<input type="text" name = "search" placeholder="Try searching" >
-			<button type ="submit" name ="submit-search">Enter</button>
-		</form>
+	<div class="searchbtn">
+			<form action = "search.php" method ="POST" >
+				<input type="text" name = "search" placeholder="Try searching" class="searchbar">
+				<button type ="submit" name ="submit-search" class="submitbtn"><i class="fa fa-search"></i></button>
+			</form>
+	</div>
 
 
 
