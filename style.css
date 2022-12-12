@@ -5,6 +5,7 @@
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
 	scroll-behavior: smooth;
+    transition: 0.3s;
 }
 
 body{
@@ -85,17 +86,14 @@ nav ul li a:hover{
 }
 
 .logo img:hover {
-    filter: drop-shadow(8px 8px 10px gray);
+    filter: drop-shadow(8px 8px 10px rgb(24, 24, 24));
 }
-
-
-
 
 .sec1container{
     border-radius: 20px;
     border-style: solid;
-    border-color: white;
-    background-color: rgb(0, 0, 0,0.3);
+    border-color: rgb(0, 0, 0,0.6);
+    background-color: rgb(0, 0, 0,0.4);
     max-width: 1200px;
     height: auto;
     margin: auto;
@@ -140,7 +138,13 @@ nav ul li a:hover{
     margin: 25px 0;
 }
 
-.searchbtn {
+/*Search bar*/
+
+.searchbtn{
+    width: 100%;
+}
+
+.searchbarcontainer {
 	overflow: hidden;
 	width:100%;
 }
@@ -156,6 +160,23 @@ nav ul li a:hover{
     background: #f2faf5;
 }
         
+.searchfilter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em;
+}
+
+.col-2-filter{
+    display: flex;
+    min-width: 300px;
+    justify-content: center;
+}
+
+.col-2-filter label{
+    color: #fff;
+}
+
 .submitbtn {
     border-radius: 0px 10px 10px 0px;
     width: 6%;
@@ -168,7 +189,70 @@ nav ul li a:hover{
     cursor: pointer;
 }
 
+.submitbtn:hover{
+    background-color: #0B4236;
+}
+
+/* Filter buttons */
+
+.filter-button-container{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.filter-button-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.filter-button-container:hover input ~ .checkmark {
+    background-color: rgb(159, 159, 159);
+}
+
+.filter-button-container input:checked ~ .checkmark {
+    background-color: rgb(73, 73, 73, 0.5);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.filter-button-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.filter-button-container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+  
 /* Footer section */
+
+.body {height: 75%;}
 
 .footer{
     margin-top: 100px;
@@ -203,14 +287,14 @@ nav ul li a:hover{
     width: 1300px;
     color: rgb(0, 0, 0);
     text-align: center;
-    box-shadow: 5px 10px 18px #888888;
+    box-shadow: none;
     transition: all 800ms ease;
     padding: 1.3rem;
     margin-top: 30px;
 }
 
 .please:hover, .search-result:hover {
-    box-shadow: none;
+    box-shadow: 5px 10px 18px #212121;
 }
 
 .please tables {
@@ -221,6 +305,10 @@ nav ul li a:hover{
     margin: none;
     height: 2.8rem;
     border-bottom: 1px solid rgb(107, 107, 107);
+}
+
+.please td:hover{
+    background-color: rgb(178, 178, 178);
 }
 
 .please tr:last-child td {
@@ -238,7 +326,7 @@ nav ul li a:hover{
     width: 1300px;
     height: 100px;
     background-color: #d9d3d3;
-    box-shadow: 5px 10px 18px #888888;
+    box-shadow: none;
     transition: all 800ms ease;
     
 }

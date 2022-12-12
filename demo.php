@@ -42,24 +42,36 @@
 				</div>
 				<div class="searchbtn" id= "btn">
 					<form action = "search.php" method ="POST" >
-						<input type="text" name = "search" placeholder="Do you want to find something?" class="searchbar">
-						<button type ="submit" name ="submit-search" class="submitbtn"><i class="fa fa-search"></i></button>
+						<div class="searchbarcontainer">
+							<input type="text" name = "search" placeholder="Do you want to find something?" class="searchbar">
+							<button type ="submit" name ="submit-search" class="submitbtn"><i class="fa fa-search"></i></button>
+						</div>
+						<div class="searchfilter">
+							<div class="col-2-filter">
+								<label class="filter-button-container">Borrower Records
+  									<input type="radio" checked="checked" name="filterbutton" value="borrow">
+  									<span class="checkmark"></span>
+								</label>
+							</div>
+							<div class="col-2-filter">
+							<label class="filter-button-container">Book Records
+  									<input type="radio" name="filterbutton" value="book">
+  									<span class="checkmark"></span>
+								</label>
+							</div>
+						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</section>
-
-		<!-- search function-->
-		<!-- Nothing special just codes to display a table [can be removed]-->
-		
-		<section class="footer">
-			<div class="footer-logo">
-				<img src="img/sec1logo.png">
-			</div>
-			<div class="footer-about">
-				<p>© 2022 HMM School Library, All Rights Reserved</p>
-			</div>
-    	</section>
-	</body>
+	<section class="footer">
+		<div class="footer-logo">
+			<img src="img/sec1logo.png">
+		</div>
+		<div class="footer-about">
+			<p>© 2022 HMM School Library, All Rights Reserved</p>
+		</div>
+	</section>
+</body>
 </html>
