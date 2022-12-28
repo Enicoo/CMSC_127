@@ -337,3 +337,10 @@ nav ul li a:hover{
     color: rgb(2, 2, 2);
 }
 
+.input-form {
+
+}
+
+.input-form label {
+    color: white ;
+}
