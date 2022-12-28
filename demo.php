@@ -25,6 +25,7 @@
 				<ul>
 					<li><a href="demo.php">Home</a></li>
 					<li><a href="#btn">Search</a></li>
+					<li><a href="borrow.php">Borrow books?</a></li>	
 				</ul>
 			</nav>
 		</div>
