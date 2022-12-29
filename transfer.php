@@ -10,15 +10,20 @@
         $usergroup = $_POST['usergroup'];
         $email = $_POST['email'];
         $book = $_POST['book'];
+        $date = date('y-m-d');
 
         $sql = "INSERT INTO `personaldata` (`p_ID`, `p_name`, `c_ID`, `p_birthday`, `p_contact`, `p_gender`, `p_email`, `p_usergroup`)
-        
         VALUES ('$studentid', '$name' , '$course', '$bday', '$number', '$gender', '$email', '$usergroup')";
 
+        $sql1 = "INSERT INTO `borrowerrecords` (`b_ID`, `p_ID`, `r_ID`, `r_releaseDate`, `r_returnDate`, `r_returnedDate`, `r_daysOfPenalty`, `r_description`) 
+        VALUES (NULL, '$studentid', '$book', '$date', '', '', '', '')";
+
         $result = mysqli_query($conn,$sql);
-        if($result) {
+        $result1 = mysqli_query($conn,$sql1);
+            
+        if($result && $result1) {
             $conn->close(); 
-            header("location:../db/demo.php");
+            header("location:../db/thankyou.php");
         }
         else { 
             die(mysqli_error($conn));
